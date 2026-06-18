@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#0B3D2E" />
+<title>Hausla Studio</title>
+<!-- Manifest aur Icons yahan aayenge -->
+
+<style>
+  /* Jo CSS aapne di hai, woh yahan waisi hi rahegi */
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+  
+  :root{
+    --emerald:#0B3D2E;
+    --emerald-deep:#082A20;
+    --parchment:#F4EFE3;
+    --gold:#D4A93A;
+    --gold-soft:#E8C871;
+    --coral:#E1654A;
+    --white:#FFFFFF;
+    --line: rgba(244,239,227,0.14);
+  }
+
+  body{
+    background: radial-gradient(circle at 20% -10%, #123F2F 0%, var(--emerald) 45%, var(--emerald-deep) 100%);
+    color: var(--parchment);
+    font-family: 'Inter', sans-serif;
+    min-height:100vh;
+    padding-bottom: 48px;
+    margin: 0;
+  }
+  
+  .wrap{ max-width: 480px; margin: 0 auto; padding: 28px 20px 0; }
+  
+  /* Aapka baki CSS structure yahan copy karein */
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brandmark">Hausla <em>Studio</em></div>
+  </header>
+  <p class="tagline">Apni motivational reel jodain</p>
+
+  <!-- Upload Section -->
+  <section class="card">
+    <div class="upload-zone" id="uploadZone" role="button">
+      <span class="icon">🎬</span>
+      <span class="primary">Video clips yahan dalain</span>
+    </div>
+    <!-- Yeh input tag zaruri hai -->
+    <input type="file" id="fileInput" accept="video/mp4,video/mov,video/*" multiple />
+    <div class="filmstrip" id="filmstrip"></div>
+  </section>
+
+  <button class="generate-btn" id="generateBtn">Video Banayein</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
